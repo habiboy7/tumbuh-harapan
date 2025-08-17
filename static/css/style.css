@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-shadow-md {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-subtle {
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.10);
+}
+
+.bg-overlay {
+  background-color: rgba(255 255 255 / 0.85);
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+#mobile-menu {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.rotate-3 {
+  transform: rotate(3deg);
+}
+
+.rotate-6 {
+  transform: rotate(6deg);
+}
+
+.rotate-9 {
+  transform: rotate(9deg);
+}
+
+.-rotate-3 {
+  transform: rotate(-3deg);
+}
+
+.-rotate-6 {
+  transform: rotate(-6deg);
+}
+
+.-rotate-9 {
+  transform: rotate(-9deg);
+}
+
+.-rotate-30 {
+  transform: rotate(-30deg);
+}
+
+.w-18 {
+  width: 4.5rem;
+}
+
+.w-22 {
+  width: 5.5rem;
+}
+
+.w-26 {
+  width: 6.5rem;
+}
+
+.h-22 {
+  height: 5.5rem;
+}
+
+.h-26 {
+  height: 6.5rem;
+}
+
+#headline {
+  font-family: 'Libertinus Serif', serif;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 115, 0, 0.15);
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #f97316;
+  color: white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+  font-weight: bold;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}

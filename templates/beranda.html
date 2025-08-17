@@ -1,0 +1,377 @@
+{% extends "base.html" %}
+{% block title %}Cek Stunting{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 relative overflow-hidden">
+  <!-- Background decorative elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <!-- Orange decorative shapes -->
+    <div
+      class="absolute top-0 left-0 w-16 h-24 bg-gradient-to-br from-orange-300 to-orange-400 rounded-lg transform -rotate-12 opacity-80">
+    </div>
+    <div
+      class="absolute top-12 left-8 w-12 h-16 bg-gradient-to-br from-orange-200 to-orange-300 rounded-lg transform rotate-45 opacity-60">
+    </div>
+    <div
+      class="absolute top-32 left-4 w-8 h-12 bg-gradient-to-br from-orange-300 to-orange-400 rounded-lg transform -rotate-45 opacity-70">
+    </div>
+
+    <div
+      class="absolute top-0 right-0 w-20 h-32 bg-gradient-to-bl from-orange-300 to-orange-400 rounded-lg transform rotate-12 opacity-80">
+    </div>
+    <div
+      class="absolute top-16 right-8 w-16 h-20 bg-gradient-to-bl from-orange-200 to-orange-300 rounded-lg transform -rotate-30 opacity-60">
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 w-24 h-16 bg-gradient-to-tr from-orange-300 to-orange-400 rounded-lg transform rotate-45 opacity-80">
+    </div>
+    <div
+      class="absolute bottom-12 left-12 w-12 h-8 bg-gradient-to-tr from-orange-200 to-orange-300 rounded-lg transform -rotate-12 opacity-60">
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 w-20 h-24 bg-gradient-to-tl from-orange-300 to-orange-400 rounded-lg transform -rotate-45 opacity-80">
+    </div>
+    <div
+      class="absolute bottom-16 right-12 w-14 h-10 bg-gradient-to-tl from-orange-200 to-orange-300 rounded-lg transform rotate-30 opacity-60">
+    </div>
+  </div>
+
+  <!-- Photo collage background -->
+  <div class="absolute inset-0 pointer-events-none">
+    <!-- Left side photos -->
+    <div class="absolute top-48 left-16 w-24 h-32 transform -rotate-12 hidden lg:block" ">
+      <img src="/static/assets/a.jpeg" alt="Anak 1" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute top-80 left-8 w-28 h-36 transform rotate-6 hidden lg:block">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=400&fit=crop&crop=face"
+        alt="Anak 2" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-48 left-20 w-32 h-20 transform -rotate-6 hidden lg:block">
+      <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=300&h=400&fit=crop&crop=face"
+        alt="Anak 3" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-40 left-4 w-20 h-22 transform rotate-12 hidden lg:block">
+      <img src="/static/assets/b.jpeg" alt="Anak 4" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <!-- Right side photos -->
+    <div class="absolute top-32 right-16 w-28 h-24 transform rotate-12 hidden lg:block">
+      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=300&h=400&fit=crop&crop=face"
+        alt="Anak 5" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute top-64 right-8 w-24 h-32 transform -rotate-6 hidden lg:block">
+      <img src="/static/assets/e.jpeg" alt="Anak 6" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-28 right-20 w-32 h-36 transform rotate-6 hidden lg:block">
+      <img src="/static/assets/f.jpeg" alt="Anak 7" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-52 right-4 w-24 h-28 transform -rotate-12 hidden lg:block">
+      <img src="/static/assets/g.jpeg" alt="Anak 8" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <!-- Center area photos -->
+    <div class="absolute top-40 left-60 w-28 h-36 transform rotate-6 hidden xl:block">
+      <img src="/static/assets/h.jpeg" alt="Anak 9" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-40 right-1/4 w-26 h-32 transform -rotate-12 hidden xl:block">
+      <img src="/static/assets/j.jpeg" alt="Anak 10" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-12">
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Main headline -->
+      <h1 id="headline" class="t:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 leading-tight">
+        Stunting bukanlah takdir, tapi tantangan yang bisa kita hadapi bersama
+      </h1>
+
+      <!-- Description -->
+      <p class="text-lg md:text-xl text-gray-900 mb-8 leading-relaxed">
+        Bersama <span class="text-orange-500 font-bold">Tumbuh Harapan</span>, mari berperan aktif mencegah dan
+        melindungi anak-anak dari ancaman stunting, demi masa depan yang sehat dan cerah.
+      </p>
+
+      <!-- Action buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center ">
+        <a href="{{ url_for('tes_stunting') }}">
+          <button
+            class="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white  px-6 py-2 rounded-lg transition-colors duration-200 font-semibold text-lg min-w-[250px] sm:min-w-[200px]">
+            Cek Si Kecil
+          </button>
+        </a>
+        <a href="#misiKami">
+          <button
+            class="bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-300 px-6 py-2 rounded-lg transition-colors duration-200 font-semibold text-lg min-w-[250px] sm:min-w-[200px] hover:border-orange-500 hover:text-orange-500">
+            Misi Kami
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile photo elements -->
+  <div class="block lg:hidden absolute inset-0 pointer-events-none opacity-30">
+    <div class="absolute top-20 left-4 w-16 h-20 transform -rotate-12">
+      <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=400&fit=crop&crop=face"
+        alt="Anak mobile 1" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute top-32 right-4 w-20 h-16 transform rotate-12">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=400&fit=crop&crop=face"
+        alt="Anak mobile 2" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-32 left-4 w-18 h-22 transform rotate-6">
+      <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=300&h=400&fit=crop&crop=face"
+        alt="Anak mobile 3" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+
+    <div class="absolute bottom-20 right-4 w-16 h-20 transform -rotate-6">
+      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=300&h=400&fit=crop&crop=face"
+        alt="Anak mobile 4" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+  </div>
+</div>
+
+<section class="relative bg-gray-50">
+  <div class="h-[500vh] relative">
+
+    <div class="absolute inset-0 pointer-events-none  z-10">
+
+      <div class="absolute top-[100vh] left-[5%] lg:left-[10%] w-32 h-40 transform -rotate-12 hidden md:block">
+        <img src="/static/assets/babyMom.jpeg" alt="Ibu dan Anak"
+          class="w-full h-full object-cover rounded-lg shadow-2xl" />
+      </div>
+
+      <div class="absolute top-[150vh] right-[5%] lg:right-[10%] w-28 h-36 transform rotate-12 hidden md:block">
+        <img src="/static/assets/food.jpeg" alt="Ayah dan Anak"
+          class="w-full h-full object-cover rounded-lg shadow-2xl" />
+      </div>
+      <div class="absolute top-[260vh] right-[2%] lg:right-[5%] w-32 h-40 transform -rotate-6 hidden md:block">
+        <img src="/static/assets/circle.jpeg" alt="Pojok Baca"
+          class="w-full h-full object-cover rounded-lg shadow-2xl" />
+      </div>
+
+      <div class="absolute top-[120vh] left-[15%] w-10 h-10 transform -rotate-12 hidden md:block">
+        <iconify-icon icon="fluent:sparkle-24-filled" class="w-full h-full text-yellow-400"></iconify-icon>
+      </div>
+
+      <div class="absolute top-[230vh] right-[10%] w-12 h-12 transform rotate-6 hidden md:block">
+        <iconify-icon icon="fluent:star-24-filled" class="w-full h-full text-orange-400"></iconify-icon>
+      </div>
+
+    </div>
+
+    <div class="absolute top-[210vh] left-[2%] lg:left-[5%] w-28 h-36 transform rotate-6 hidden md:block z-20">
+      <img src="/static/assets/eling.jpeg" alt="Anak Main" class="w-full h-full object-cover rounded-lg shadow-2xl" />
+      <h6 id="triggerHover" class="text-center text-md font-semibold mt-4 cursor-pointer">
+        Arahkan sini
+        <iconify-icon icon="fa-solid:hand-sparkles" width="30" height="30" class="text-orange-500"></iconify-icon>
+      </h6>
+
+      <!-- Card muncul saat hover -->
+      <div id="glassCard" class="hidden flex items-center gap-4 p-4 rounded-xl absolute top-[-200px] left-1/2 -translate-x-1/2
+              w-80 backdrop-blur-lg bg-gradient-to-br from-orange-200/40 to-white/20
+              border border-white/40 shadow-lg transition-all duration-300 z-50">
+        <!-- Pesan -->
+        <p class="text-black font-semibold text-lg">
+          Mari saling menjaga dan mencintai buah hati dengan sepenuh hati 💖
+        </p>
+        <!-- Gambar di kanan -->
+        <img src="/static/assets/j.jpeg" alt="Love Baby" class="w-16 h-16 rounded-lg shadow-md object-cover" />
+      </div>
+    </div>
+
+
+    {% set steps = [
+    {
+    "title": "Apa itu Stunting?",
+    "text": "Stunting adalah masalah kurang gizi kronis yang terjadi karena anak tidak mendapatkan asupan gizi sesuai
+    kebutuhannya dalam waktu lama. Kondisi ini bisa dimulai sejak janin masih dalam kandungan dan biasanya baru terlihat
+    saat anak berusia sekitar dua tahun. Stunting tidak hanya menghambat pertumbuhan fisik dan membuat anak lebih rentan
+    sakit, tetapi juga dapat mempengaruhi perkembangan otak, kecerdasan, dan produktivitas anak di masa depan.",
+    "img": "/static/assets/satu.jpeg"
+    },
+    {
+    "title": "Stunting di Indonesia",
+    "text": "Di Indonesia, prevalensi stunting masih cukup tinggi. Ini menjadi tantangan bersama untuk meningkatkan gizi
+    ibu hamil dan anak. Tahun 2024, angka stunting di Indonesia turun menjadi 19,8%, sedikit lebih baik dari target
+    20,1% dan menurun dari 21,5% di tahun 2023. Penurunan ini adalah kabar baik, tapi belum cukup untuk mencapai target
+    14,2% pada 2029. Artinya, masih ada banyak anak yang berisiko mengalami stunting. Upaya pencegahan tetap harus
+    diperkuat, mulai dari perbaikan gizi ibu hamil, pemberian ASI eksklusif, hingga makanan bergizi seimbang bagi
+    balita. ",
+    "img": "/static/assets/dua.jpeg",
+    "source": "https://stunting.go.id/prevalensi-stunting-indonesia-turun-ke-198/"
+    },
+    {
+    "title": "Bersama Cegah Stunting untuk Masa Depan Anak",
+    "text": "Mencegah stunting berarti memberi anak kesempatan tumbuh sehat, cerdas, dan penuh potensi. Langkah
+    sederhana seperti menyediakan makanan bergizi, memantau tumbuh kembang, dan menjaga kebersihan lingkungan bisa
+    membuat perbedaan besar. Dengan kerja sama keluarga, masyarakat, dan pemerintah, kita bisa wujudkan generasi emas
+    Indonesia — anak-anak yang tumbuh kuat, bahagia, dan siap menghadapi masa depan. 🌱✨",
+    "img": "/static/assets/tiga.jpeg"
+    }
+    ] %}
+
+
+    {% for step in steps %}
+    <div class="sticky top-5 flex justify-center items-center h-screen px-4">
+      <div
+        class="card-info h-[70%] rounded-xl shadow-xl w-full max-w-5xl flex flex-col md:flex-row overflow-hidden transition-transform duration-500 bg-gradient-to-br from-orange-50 to-white/80 backdrop-blur-sm border border-orange-100 z-{{ 30 - loop.index }}">
+        <!-- Text -->
+        <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center text-justify">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4 text-orange-700">{{ step.title }}</h2>
+          <p class="text-base md:text-lg font-medium text-gray-800">
+            {{ step.text }}
+          </p>
+
+          {% if step.source %}
+          <p class="mt-4 text-lg text-gray-600 font-bold" id="misiKami">
+            Sumber : <a href="{{ step.source }}" target="_blank"
+              class="text-orange-600 underline hover:text-orange-800">
+              Artikel selengkapnya
+            </a>
+          </p>
+          {% endif %}
+        </div>
+        <!-- Image -->
+        <div class="md:w-1/2">
+          <img src="{{ step.img }}" alt="{{ step.title }}" class="w-full h-64 md:h-full object-cover" />
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<section class="py-12 bg-gradient-to-br border from-orange-50 to-orange-100" id="tips-gizi">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-orange-700 mb-8">Tips Gizi Harian Anak</h2>
+
+    <!-- Carousel Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div
+            class="bg-white/90 px-12 rounded-xl border border-orange-200 p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div class="text-5xl">👶</div>
+            <div>
+              <h3 class="text-lg font-semibold text-orange-700">ASI Eksklusif 6 Bulan</h3>
+              <p class="text-gray-700">ASI adalah makanan terbaik untuk bayi 0–6 bulan karena mengandung semua gizi yang
+                dibutuhkan serta meningkatkan daya tahan tubuh. Setelah 6 bulan, lanjutkan pemberian ASI hingga usia 2
+                tahun dengan tambahan MPASI bergizi seimbang.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div
+            class="bg-white/90 px-12 rounded-xl border border-orange-200 p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div class="text-5xl">🥦</div>
+            <div>
+              <h3 class="text-lg font-semibold text-orange-700">MPASI Bergizi</h3>
+              <p class="text-gray-700">Mulai usia 6 bulan, bayi perlu mendapat Makanan Pendamping ASI (MPASI) yang
+                bervariasi, mencakup karbohidrat, protein hewani, protein nabati, sayur, buah, dan lemak sehat. MPASI
+                bergizi membantu tumbuh kembang optimal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div
+            class="bg-white/90 px-12 rounded-xl border border-orange-200 p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div class="text-5xl">💧</div>
+            <div>
+              <h3 class="text-lg font-semibold text-orange-700">Cukupi Cairan</h3>
+              <p class="text-gray-700">Pastikan anak mengonsumsi air minum yang bersih dan aman. Dehidrasi dapat
+                memengaruhi kesehatan, sementara air yang tercemar meningkatkan risiko diare yang berkontribusi pada
+                stunting. Hindari minuman manis berlebihan karena bisa mengganggu kesehatan gigi dan berat badan anak.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div
+            class="bg-white/90 px-12 rounded-xl border border-orange-200 p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div class="text-5xl">🏃</div>
+            <div>
+              <h3 class="text-lg font-semibold text-orange-700">Aktivitas Fisik</h3>
+              <p class="text-gray-700">Anak-anak perlu aktif bergerak dan bermain untuk melatih motorik, menjaga
+                kesehatan, dan mendukung pertumbuhan tulang serta otot. Aktivitas fisik juga mendukung perkembangan
+                otak. Cahaya matahari pagi juga baik untuk pembentukan vitamin D.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-4"></div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next text-orange-600"></div>
+      <div class="swiper-button-prev text-orange-600"></div>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 md:px-10 py-10 mt-12">
+  <div class="max-w-7xl mx-auto">
+    <!-- Judul -->
+    <div class="mb-6">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900">Makanan yang Disarankan</h2>
+      <p class="text-gray-600">Pilihan makanan bergizi untuk mendukung pertumbuhan optimal anak</p>
+    </div>
+
+    <!-- Grid makanan -->
+    <div id="foodGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Cards JS -->
+    </div>
+  </div>
+</section>
+
+<div id="findFaskes"
+  class="max-w-4xl mb-8 mx-auto mt-8 px-4 sm:px-6 md:px-8 py-6 rounded-2xl shadow-xl bg-gradient-to-r from-orange-500 via-orange-500 to-orange-700 text-center text-white">
+  <h2 class="text-xl md:text-2xl font-bold mb-2">Butuh Konsultasi Lebih Lanjut?</h2>
+  <p class="mb-4 text-sm md:text-base">Hubungi tenaga kesehatan terdekat untuk mendapatkan panduan gizi yang sesuai
+    dengan kondisi anak Anda</p>
+
+  <!-- Tombol pilihan -->
+  <div class="flex flex-wrap gap-3 justify-center">
+    <button onclick="findNearby('puskesmas')"
+      class="px-4 py-2 bg-white text-black rounded-lg shadow hover:bg-gray-100 font-medium">
+      Cari Puskesmas
+    </button>
+    <button onclick="findNearby('dokter anak')"
+      class="px-4 py-2 bg-white text-black rounded-lg shadow hover:bg-gray-100 font-medium">
+      Cari Dokter Anak
+    </button>
+    <button onclick="findNearby('klinik')"
+      class="px-4 py-2 bg-white text-black rounded-lg shadow hover:bg-gray-100 font-medium">
+      Cari Klinik
+    </button>
+  </div>
+</div>
+
+
+<div id="alertBox" class="hidden mt-3 text-center text-sm text-white font-medium px-4 py-2 rounded-lg bg-green-500">
+</div>
+
+
+{% endblock %}

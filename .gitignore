@@ -1,0 +1,12 @@
+# File-file yang dibuat secara otomatis oleh Python
+__pycache__/
+*.pyc
+
+# Lingkungan virtual
+venv/
+
+# File sensitif dan database
+.env
+*.db 
+*.db-journal
+
