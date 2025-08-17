@@ -7,8 +7,11 @@ Tumbuh harapan merupakan sebuah aplikasi deteksi dini stunting berbasis website 
 
 ## 2. Teknologi yang Digunakan
 **Frontend :** Html, CSS, TailwindCSS, Javascript
+
 **Backend :**  Flask, Python
+
 **Database :** sqlite3
+
 **Replicate API :** Akses model IBM Granite AI
 
 ## 3. Fitur
